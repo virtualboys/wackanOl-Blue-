@@ -6,7 +6,7 @@ function UnityProgress (dom) {
 	var parent = dom.parentNode;
 
 	var background = document.createElement("div");
-	background.style.background = "#4D4D4D";
+	background.style.background = "#040404";
 	background.style.position = "absolute";
 	parent.appendChild(background);
 	this.background = background;
@@ -61,6 +61,9 @@ function UnityProgress (dom) {
 	}
 
 	this.Update = function() {
+		console.log("progress" + this.progress);
+
+
 		this.background.style.top = this.dom.offsetTop + 'px';
 		this.background.style.left = this.dom.offsetLeft + 'px';
 		this.background.style.width = this.dom.offsetWidth + 'px';
